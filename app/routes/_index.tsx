@@ -2,52 +2,58 @@ import type { MetaFunction } from "@remix-run/cloudflare";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "我的网站" },
+    { name: "description", content: "欢迎来到我的网站" },
   ];
 };
 
 export default function Index() {
   return (
-    <div className="flex h-screen items-center justify-center">
-      <div className="flex flex-col items-center gap-16">
-        <header className="flex flex-col items-center gap-9">
-          <h1 className="leading text-2xl font-bold text-gray-800 dark:text-gray-100">
-            Welcome to <span className="sr-only">Remix</span>
-          </h1>
-          <div className="h-[144px] w-[434px]">
-            <img
-              src="/logo-light.png"
-              alt="Remix"
-              className="block w-full dark:hidden"
-            />
-            <img
-              src="/logo-dark.png"
-              alt="Remix"
-              className="hidden w-full dark:block"
-            />
-          </div>
-        </header>
-        <nav className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-gray-200 p-6 dark:border-gray-700">
-          <p className="leading-6 text-gray-700 dark:text-gray-200">
-            What&apos;s next?
-          </p>
-          <ul>
-            {resources.map(({ href, text, icon }) => (
-              <li key={href}>
-                <a
-                  className="group flex items-center gap-3 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500"
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {icon}
-                  {text}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+    <div className="min-h-screen">
+      {/* 导航栏 */}
+      <nav className="flex justify-center items-center py-6 bg-transparent">
+        <ul className="flex gap-12 text-white">
+          <li>
+            <a 
+              href="#" 
+              className="hover:text-gray-300 transition-colors duration-200 text-lg"
+            >
+              往日之影
+            </a>
+          </li>
+          <li>
+            <a 
+              href="#" 
+              className="hover:text-gray-300 transition-colors duration-200 text-lg"
+            >
+              游戏人生
+            </a>
+          </li>
+          <li>
+            <a 
+              href="#" 
+              className="hover:text-gray-300 transition-colors duration-200 text-lg"
+            >
+              更新日志
+            </a>
+          </li>
+          <li>
+            <a 
+              href="#" 
+              className="hover:text-gray-300 transition-colors duration-200 text-lg"
+            >
+              此刻留声
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      {/* 主内容区域 */}
+      <div className="flex items-center justify-center min-h-[calc(100vh-80px)]">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">欢迎访问</h1>
+          <p className="text-xl text-gray-300">在这里开始你的旅程</p>
+        </div>
       </div>
     </div>
   );

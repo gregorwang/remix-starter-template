@@ -6,15 +6,17 @@ export default {
     extend: {
       fontFamily: {
         sans: [
-          "Inter",
-          "ui-sans-serif",
+          "CursorGothic",
+          "CursorGothic Fallback",
           "system-ui",
+          "Helvetica Neue",
+          "Helvetica",
+          "Arial",
           "sans-serif",
-          "Apple Color Emoji",
-          "Segoe UI Emoji",
-          "Segoe UI Symbol",
-          "Noto Color Emoji",
         ],
+      },
+      backgroundColor: {
+        'custom-dark': 'rgb(38, 37, 30)',
       },
     },
   },
